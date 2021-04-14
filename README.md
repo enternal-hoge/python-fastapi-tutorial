@@ -50,6 +50,10 @@ docker run -d --name mycontainer -p 8000:80 myimage
 Confirm using Browser
 
 http://localhost:8000/items/5?q=somequery
+
+
 http://localhost:8000/docs
+
+
 http://localhost:8000/redoc
 
