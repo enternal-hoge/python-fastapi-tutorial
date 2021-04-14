@@ -15,6 +15,8 @@ Install
 $ sudo pip3 install fastapi uvicorn
 ```
 
+Tutorial procedure
+
 ```
 $ touch intro.py
 $ vi intro.py 
