@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get('/') # methodとendpointの指定
+@app.get('/')
 async def hello():
     return {"text": "hello world!"}

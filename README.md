@@ -7,6 +7,41 @@ The purpose is to create a mock quickly and create a REST API specification quic
 
 I feel that fastapi is better than JSON Server. Also, I use fastapi when writing REST APIs in Python.
 
+## for Mac
+
+Install
+
+```
+$ sudo pip3 install fastapi uvicorn
+```
+
+```
+$ touch intro.py
+$ vi intro.py 
+$ cat intro.py
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/')
+async def hello():
+    return {"text": "hello world!"}
+
+$ uvicorn intro:app --reload
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [66278] using statreload
+INFO:     Started server process [66280]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
+
+Confirm using Browser
+
+http://127.0.0.1:8000/docs
+
+
+## Using Docker
+
 Dockerfile
 ```
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
